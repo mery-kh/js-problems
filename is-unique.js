@@ -1,10 +1,10 @@
 function isUnique(str) {
-    let arr = [];
-    for (let i = 0; i < str.length; ++i) {
-        if (!arr.includes(str[i])) arr.push(str[i]);
-        else return false;
+    let obj = {};
+    for (let s of str) {
+        if (obj[s]) return false;
+        obj[s] = true;
     }
     return true;
 }
 
-console.log(isUnique('Mery'));
+console.log(isUnique("Mery‍👦"));
